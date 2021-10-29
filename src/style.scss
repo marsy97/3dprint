@@ -1,0 +1,564 @@
+$primary-color: #001122;
+$secondary-color: #00a4af;
+$font-face:Poppins;
+
+
+*{
+    padding:0;
+    margin:0;
+    font-family:$font-face;
+}
+
+body{
+    background:#FBFBFB;
+}
+
+.container{
+    width:80% !important;
+    margin:0 auto;
+}
+
+.overlay-svg{
+    background: rgba( 255, 255, 255, 0.25 );
+    
+    backdrop-filter: blur( 5px );
+   
+}
+
+//-----NAVIGACIJA-----------
+.nav{
+    position:fixed;
+    top:1rem;
+    width:70%;
+    margin:auto;
+    z-index:100;
+    
+}
+
+.nav-inner{
+    display:flex;
+    justify-content: flex-end;
+
+    a{
+        color:white;
+        text-decoration:none;
+        margin:1rem 2rem ;
+        padding:0.2rem;
+        font-weight:800;
+        font-size:1.2rem;
+        transition:color 0.4s;
+        letter-spacing:2px;
+    }
+
+    a:hover{
+        color:$primary-color;
+        border-bottom:2px solid $primary-color;
+        transition:color 0.5s;
+    }
+    
+}
+
+.logo {
+
+    img{
+        width:50%;
+        
+    }
+    
+    color:white;
+    font-size:2rem;
+}
+
+//HEADER-----
+
+
+
+header{
+    height:90vh;
+    background-image:url("./Components/headerbg.svg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+
+    .overlay{
+        position:absolute;
+        top:0;bottom:0;left:0;right:0;
+        background: rgba(100, 100, 100, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.4 );
+        backdrop-filter: blur( 3px );
+        
+    }
+
+
+
+
+    //MIDDLE TEXT
+
+    .middleText{
+        color:White;
+        position:absolute;
+        top:40%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align: center;
+        width:30%;
+        text-shadow: 2px 2px 3px #000000;
+        font-weight: 600;
+    }
+    h1{
+        font-size:4rem;
+        
+        font-weight: 700;
+    }
+
+    p{
+        
+        font-size:1.3rem;
+        padding:2rem 0;
+        
+    }
+
+    
+    a{
+        text-decoration:none;
+        color:$primary-color;
+        background:white;
+        padding:1rem 1.5rem;
+        text-shadow:none;
+        letter-spacing:2.5px;
+        transition:0.5s;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        outline: none;
+        border:none;
+        display:inline-block;
+        
+        
+        }
+        a:hover{
+            background-color: #29b4c7;
+            box-shadow: 0px 15px 20px rgba(46, 229, 220, 0.4);
+            color: #fff;
+            transform: translateY(-10%);
+            transition:0.5s;
+        }
+
+        a:active{
+            transform: translateY(-10%);
+            transform:scale(95%);
+            transition:0.5s;
+        }
+}
+
+//ABOUT-----
+
+.about-bg{
+    
+    background-image:url("./Components/about-bg.svg");
+    background-repeat:no-repeat;
+    background-size:contain;
+    
+
+
+}
+
+.about{
+    font-weight:600;
+    color:$primary-color;
+    display:flex;
+    text-align: center;
+    justify-content:space-around;
+    line-height: 1.5rem;
+    margin-top:20rem;
+
+    
+
+    
+
+    h2{
+        font-weight:700;
+
+    }
+
+    .about-left{
+        width:30%;
+    }
+
+    .about-right{
+        width:30%;
+    }
+
+}
+
+//GALERRY----
+
+.gallery-bg{
+    background-image:url("./Components/gallery-bg.svg");
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:20% 0%;
+   
+}
+.gallery{
+    display:flex;
+    justify-content:space-between;
+    font-weight:600;
+    color:$primary-color;
+    margin-top:20rem;
+    
+
+    h2{
+        font-weight:700;
+    }
+
+    .gallery-left{
+        width:100%;
+
+        p{
+            width:40%;
+            padding:3rem 0 1rem;
+        }
+
+        a{
+            display:inline-block;
+            text-decoration: none;
+            padding:1rem 2rem;
+            background:$primary-color;
+            color:white;
+            box-shadow:2px 2px 4px rgb(105, 105, 105);
+            transition:0.5s;
+
+        }
+
+        a:hover{
+            box-shadow:3px 3px 5px rgb(34, 34, 34);
+            transform:translateY(-10%);
+        }
+    }
+
+    .gallery-right{
+        width:100%;
+        
+
+        iframe{
+            width:80%;
+           height:100%;
+        }
+    }
+}
+
+
+//TESTIMONIALS-----
+
+.tst-bg{
+    background-image:url("./Components/tst-bg.svg");
+    background-repeat:no-repeat;
+    background-size:50%;
+    background-position: 100% 100%;
+}
+.testimonials{
+    color:$primary-color;
+    font-weight:600;
+    margin-top:25rem;
+    padding-bottom:15rem;
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+    
+
+    h2{
+        font-weight: 700;
+        display:inline-block;
+        position:absolute;
+        top:0;
+        left:50%;
+        transform:translate(-50%,0%);
+    }
+
+    .tst-box{
+        width:30%;
+        font-size:1.3rem;
+        background: rgba( 28, 139, 228, 0.15 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        padding:2rem;
+        position:relative;
+        top:5rem;
+    }
+}
+
+//CONTACT------------------
+.contact-bg{
+    position:relative;
+    margin-top:25rem;
+    margin-bottom:20rem;
+    
+    background:url("./Components/contactbg.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:30rem;
+
+    .overlay-svg{
+        height:30rem;
+    }
+}
+
+.contact{
+    font-weight: 600;
+    display:flex;
+    flex-wrap:wrap;
+    color:$primary-color;
+    position:absolute;
+    top:50%;
+    left:57.5%;
+    transform:translate(-50%,-50%);
+    
+
+    
+    h2{
+        font-weight: 700;
+        width:100%;
+        
+        
+    }
+    p{
+        width:100%;
+        padding-top:2rem;
+    }
+
+    a{
+        text-decoration: none;
+        color:white;
+    }
+}
+
+.footer{
+    background:#001122;
+    color:white;
+    
+    
+
+    .footer-wrapper{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        padding:5rem 0;
+    }
+
+}
+
+//---KONTAKT PAGE---------
+.kontakt-page{
+    font-weight:600;
+    color:$primary-color;
+    padding-top:10rem;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10rem;
+
+    a{
+        text-decoration:none;
+        font-weight:700;
+        color:$primary-color;
+    }
+
+    p{
+        margin:0;
+    }
+
+
+    h1{
+        font-weight:700;
+        padding:5rem 0 2rem;
+    }
+
+    .kontakt-right{
+        
+        iframe{
+            width:550px;
+            height:300px;
+
+        }
+    }
+}
+
+
+//CJENIK-PAGE-------
+
+.cjenik-page{
+    font-weight:600;
+    color:$primary-color;
+    margin-bottom:10rem;
+
+    h1{
+        font-weight:700;
+        padding-top:10rem;
+    }
+}
+
+.cjenik-inner{
+    
+    
+    display:flex;
+    justify-content:space-between;
+    gap:10%;
+
+
+    .cjenik-left{
+        img{
+            padding-top:10rem;
+            width:100%;
+        }
+    }
+
+    .cjenik-right{
+        
+        padding-top:10rem;
+
+        a{
+            text-decoration:none;
+            color:$secondary-color;
+            font-weight:700;
+        }
+
+        span{
+            font-weight:700;
+        }
+        
+    }
+}
+
+
+//GALERIJA-PAGE---------------------
+
+.galerija-page{
+    font-weight:600;
+    color:$primary-color;
+    margin-bottom:10rem;
+
+    h1{
+        font-weight:700;
+        padding-top:10rem;
+    }
+
+    .galerija-inner{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        align-items:center;
+
+        img{
+            padding-top:5rem;
+            width:30%;
+            border-radius:5%;
+        }
+
+
+    }
+}
+
+
+
+//MEDIA QUERY-----
+
+@media (max-width:500px){
+
+    header{
+
+    .middleText{
+        width:50%;
+
+        h1{
+            font-size:2rem;
+        }
+    }
+}
+
+
+.about-bg{
+    background-size:70%;
+}
+
+.about{
+    flex-wrap:wrap;
+
+    h2{
+        padding-bottom:1rem;
+
+    }
+
+    .about-left{
+        width:80%;
+        padding-bottom:5rem;
+    }
+
+    .about-right{
+        width:80%;
+    }
+}
+
+
+.gallery-bg{
+    background-size:70%;
+    background-position:100% 10%;
+}
+
+.gallery{
+    flex-wrap:wrap;
+    
+
+    .gallery-left{
+        
+        p{
+            padding:1rem 0 1rem;
+            width:100%;
+        }
+
+        
+
+    }
+
+    .gallery-right{
+        margin-top:5rem;
+
+        iframe{
+            width:100%;
+           
+        }
+    }
+
+}
+
+.tst-bg{
+    background-size:80%;
+    background-position:100% 95%;
+}
+.testimonials{
+    flex-wrap:wrap;
+    text-align:left;
+    margin-top:20rem;
+
+    h2{
+        text-align:center;
+        width:100%;
+    }
+
+    .tst-box{
+        padding:1.5rem;
+        width:100%;
+        margin-top:5rem;
+    }
+}
+
+.contact-bg{
+    margin-top:15rem;
+}
+.contact{
+    text-align:center;
+    top:55%;
+    left:50%;
+}
+
+
+}//kraj
