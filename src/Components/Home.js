@@ -6,9 +6,11 @@ import {Link} from 'react-router-dom';
 function Home() {
 
     
+
+
     return (
 
-        <body>
+        <body><div className="scroll"></div>
                 <header>
                     <div className="overlay">
                         <div className="middleText">

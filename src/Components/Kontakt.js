@@ -5,6 +5,7 @@ import ".././style.scss";
 function kontakt(){
     return(
         <body>
+            <div className="nav-bg"></div>
             <div className="container">
                 <div className="kontakt-page">
                     <div className="kontakt-left">

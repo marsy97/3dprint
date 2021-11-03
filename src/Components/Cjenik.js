@@ -6,6 +6,7 @@ import cjenikimg from "./cjenik-img.jpg";
 function cjenik(){
     return(
         <body>
+            <div className="nav-bg"></div>
             <div className="container">
              <div className="cjenik-page">
                     <h1>PRIPREMA 3D MODELA I PRORAČUN CIJENE</h1>

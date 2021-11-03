@@ -25,6 +25,24 @@ body{
    
 }
 
+.plavo{
+    color:#02c0ce !important;
+}
+
+.nav-bg{
+    position:sticky;
+    top:0;
+    height:100px;
+    background-color:$primary-color;
+}
+
+.scroll-bg{
+    position:sticky;
+    top:0;
+    height:100px;
+    background-color:$primary-color;
+}
+
 //-----NAVIGACIJA-----------
 .nav{
     position:fixed;
@@ -38,8 +56,10 @@ body{
 .nav-inner{
     display:flex;
     justify-content: flex-end;
+    align-items:center;
 
     a{
+        display:inline-block;
         color:white;
         text-decoration:none;
         margin:1rem 2rem ;
@@ -51,9 +71,27 @@ body{
     }
 
     a:hover{
-        color:$primary-color;
-        border-bottom:2px solid $primary-color;
+        color:#02c0ce;
+        
         transition:color 0.5s;
+    }
+
+    a:hover::after{
+        width:100%;
+    }
+    a::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #02c0ce;
+        transition: width .3s;
+    }
+
+    .links{
+        display:flex;
+        flex-wrap:wrap;
+
     }
     
 }
@@ -451,7 +489,7 @@ header{
         img{
             padding-top:5rem;
             width:30%;
-            border-radius:5%;
+            
         }
 
 
@@ -461,12 +499,72 @@ header{
 
 
 //MEDIA QUERY-----
+@media (min-width:500px){
 
+    .links{
+        display:flex;
+    }
+    .menu-mobile{
+        display:none;
+    }
+}
 @media (max-width:500px){
+.nav{
+
+    
+
+    .logo{
+        transform:translate(25%,0%);
+    }
+
+    .nav-inner{
+        .menu-mobile{
+            color:rgb(212, 219, 247);
+            font-weight:700;
+            letter-spacing:2px;
+            padding:0.7rem 0 0.3rem;
+
+            svg{
+                margin-right:0.5rem;
+            }
+            
+        }
+        
+        
+        overflow:hidden;
+        padding:1rem 0;
+        border-radius:2rem;
+        background:#002041;
+        text-align:center;
+        justify-content:center;
+        flex-wrap:wrap;
+        top:auto;
+        left:50%;
+        bottom:1rem;
+        transform:translate(-50%,0%);
+
+        a{
+            padding:0.5rem;
+            overflow:hidden;
+            width:100%;
+            color:white;
+            margin:0;
+        }
+
+        .links{
+            
+            display:none;
+
+        }
+        
+    }
+}
+
 
     header{
 
     .middleText{
+        top:55%;
         width:50%;
 
         h1{
@@ -559,6 +657,43 @@ header{
     top:55%;
     left:50%;
 }
+
+
+//kontakt-page
+.kontakt-page{
+    flex-wrap:wrap;
+   
+
+
+    .kontakt-right{
+        iframe{
+            width:100%;
+        }
+    }
+}
+
+//cjenik-page
+
+.cjenik-page{
+
+    .cjenik-inner{
+        flex-wrap:wrap;
+        p{
+            padding-top:2rem;
+        }
+    }
+}
+
+//galerija-page
+.galerija-page{
+    .galerija-inner{
+        img{
+            padding-top:2rem;
+            width:100%;
+        }
+    }
+}
+
 
 
 }//kraj
