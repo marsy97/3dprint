@@ -6,11 +6,13 @@ $font-face:Poppins;
 *{
     padding:0;
     margin:0;
-    font-family:$font-face;
+    
 }
 
 body{
     background:#FBFBFB;
+    font-family:$font-face;
+    
 }
 
 .container{
@@ -36,11 +38,32 @@ body{
     background-color:$primary-color;
 }
 
-.scroll-bg{
+.active{
+    z-index:99;
+    transition:0.5s background;
+    background-color:$primary-color !important;
+    height:100px !important;
+}
+
+.scroll{
+    transition:0.5s background;
+    z-index:99;
     position:sticky;
     top:0;
-    height:100px;
+    height:0px;
     background-color:$primary-color;
+    background:transparent;
+}
+
+.outer-click{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:transparent;
+    z-index:99;
+    
 }
 
 //-----NAVIGACIJA-----------
@@ -51,6 +74,7 @@ body{
     margin:auto;
     z-index:100;
     
+    
 }
 
 .nav-inner{
@@ -59,6 +83,7 @@ body{
     align-items:center;
 
     a{
+        
         display:inline-block;
         color:white;
         text-decoration:none;
@@ -67,7 +92,7 @@ body{
         font-weight:800;
         font-size:1.2rem;
         transition:color 0.4s;
-        letter-spacing:2px;
+        letter-spacing:4px;
     }
 
     a:hover{
@@ -97,6 +122,7 @@ body{
 }
 
 .logo {
+    z-index:1000;
 
     img{
         width:50%;
@@ -158,6 +184,7 @@ header{
 
     
     a{
+        
         text-decoration:none;
         color:$primary-color;
         background:white;
@@ -371,20 +398,7 @@ header{
     }
 }
 
-.footer{
-    background:#001122;
-    color:white;
-    
-    
 
-    .footer-wrapper{
-        display:flex;
-        justify-content: space-between;
-        align-items:center;
-        padding:5rem 0;
-    }
-
-}
 
 //---KONTAKT PAGE---------
 .kontakt-page{
@@ -497,6 +511,32 @@ header{
 }
 
 
+//FOOTER-----------------------------------
+.footer{
+    background:#001122;
+    color:white;
+    
+    
+
+    .footer-wrapper{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        padding:5rem 0;
+
+        .Links{
+
+        
+        img{
+            
+            height:30px;
+            padding-right:1.5rem;
+        }
+    }
+    }
+
+}
+
 
 //MEDIA QUERY-----
 @media (min-width:500px){
@@ -507,6 +547,10 @@ header{
     .menu-mobile{
         display:none;
     }
+
+    .outer-click{
+        display:none !important;
+    }
 }
 @media (max-width:500px){
 .nav{
@@ -514,10 +558,12 @@ header{
     
 
     .logo{
+       
         transform:translate(25%,0%);
     }
 
     .nav-inner{
+        z-index:999;
         .menu-mobile{
             color:rgb(212, 219, 247);
             font-weight:700;
@@ -690,6 +736,32 @@ header{
         img{
             padding-top:2rem;
             width:100%;
+        }
+    }
+}
+
+
+.footer-wrapper{
+    
+    .Links{
+        display:flex;
+
+        img{
+            height:20px !important;
+        }
+
+        a:hover{
+            background:red;
+        }
+        
+    }
+
+    .logo{
+        z-index:5 !important;
+        img{
+            
+            padding-bottom:0.5rem;
+            width:75%;
         }
     }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ".././style.scss";
 import cjenikimg from "./cjenik-img.jpg";
+import Fade from 'react-reveal/Fade';
 
 
 function galerija(){
@@ -8,19 +9,20 @@ function galerija(){
         <body>
             <div className="nav-bg"></div>
             <div className="container">
-                <div className="galerija-page">
-                    <h1>GALERIJA</h1>
-                    <div className="galerija-inner">
-                        <img src={cjenikimg} alt="3dkod"/>
-                        <img src={cjenikimg} alt="3dkod"/>
-                        <img src={cjenikimg} alt="3dkod"/>
-                        <img src={cjenikimg} alt="3dkod"/>
-                        <img src={cjenikimg} alt="3dkod"/>
-                        <img src={cjenikimg} alt="3dkod"/>
+                <Fade bottom>
+                    <div className="galerija-page">
+                        <h1>GALERIJA</h1>
+                        <div className="galerija-inner">
+                            <img src={cjenikimg} alt="3dkod"/>
+                            <img src={cjenikimg} alt="3dkod"/>
+                            <img src={cjenikimg} alt="3dkod"/>
+                            <img src={cjenikimg} alt="3dkod"/>
+                            <img src={cjenikimg} alt="3dkod"/>
+                            <img src={cjenikimg} alt="3dkod"/>
 
+                        </div>
                     </div>
-                </div>
-
+                </Fade>
             </div>
         </body>
 
